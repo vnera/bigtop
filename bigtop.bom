@@ -353,18 +353,29 @@ bigtop {
     'bigtop-utils' {
       name    = "bigtop-utils"
       relNotes = "Service package for Apache Bigtop runtime"
-      version { base = bigtop.version; pkg = base-"-SNAPSHOT"; release = 1 }
+      //version { base = bigtop.version; pkg = base-"-SNAPSHOT"; release = 1 }
+      version { base = '0.7.0'; pkg = base-"-SNAPSHOT"; release = 1 }
       tarball { destination = "bigtop-utils-${version.base}.tar.gz" }
+      //git     { repo = bigtop-utils; ref = branch-0.7; dir = null}
+
+      //
+      // ./gradlew realclean; ./gradlew bigtop-utils-deb
+      //
     }
     'bigtop-jsvc' {
       name    = "bigtop-jsvc"
       relNotes = "Apache Common Daemon (jsvc) service package"
-      version { base = '1.0.15'; pkg = base; release = 1 }
+      version { base = '1.1.0'; pkg = base; release = 1 }
       tarball { source      = "commons-daemon-${version.base}-native-src.tar.gz"
                 destination = "commons-daemon-${version.base}.tar.gz" }
       url     { download_path = "/commons/daemon/source"
                 site = "${apache.APACHE_MIRROR}/${download_path}"
                 archive = "${apache.APACHE_ARCHIVE}/${download_path}" }
+      //git     { repo = bigtop-jsvc; ref = branch-1.1.0; dir = null}
+
+      //
+      // ./gradlew realclean; ./gradlew bigtop-jsvc-deb
+      //
     }
     'bigtop-tomcat' {
       name    = "bigtop-tomcat"

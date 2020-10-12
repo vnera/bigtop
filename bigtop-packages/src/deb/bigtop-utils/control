@@ -15,13 +15,16 @@
 Source: bigtop-utils
 Section: misc
 Priority: extra
-Maintainer: Bigtop <dev@bigtop.apache.org>
+Maintainer: vRNI, VMware, Inc. <https://www.vmware.com/support>
 Build-Depends: debhelper (>= 7.0.50~)
 Standards-Version: 3.9.4
-Homepage: http://bigtop.apache.org/
+Homepage: http://bigtop.apache.org/TEST
 
 Package: bigtop-utils
 Architecture: all
 Depends: ${misc:Depends}
 Description: Collection of useful tools for Bigtop
  This includes a collection of useful tools and files for Bigtop
+ .
+ .
+ Built by vRNI, VMware, Inc.

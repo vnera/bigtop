@@ -405,7 +405,9 @@ def genTasks = { target ->
     def changelog = new File("$DEB_BLD_DIR/debian/changelog").newWriter()
     changelog << "$PKG_NAME ($PKG_VERSION-$BIGTOP_BUILD_STAMP) stable; urgency=low\n"
     changelog << "  Clean build\n"
-    changelog << " -- Bigtop <dev@bigtop.apache.org>  ${getDate()}\n"
+    //changelog << " -- Bigtop <dev@bigtop.apache.org>  ${getDate()}\n"
+    // daymanc: use our own support handle:
+    changelog << "  -- MAINTAINER vRNI, VMware, Inc. <https://www.vmware.com/support>  ${getDate()}\n"
     changelog.close()
 
     // Move patches and create "series"
